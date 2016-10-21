@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>hosptial</title>
+		<link rel="stylesheet" href="css/default.css" />
+		<style type="text/css">
+
+		</style>
+	</head>
+
+	<body>
+		<!-- 导航栏 -->
+		<header>
+			<!-- 导航栏左侧 -->
+			<div class="left" style="width: 46%; height: 100%; ">
+				<div class="first" style="float: left; height: 100%; width: 30%;">
+					<img src="img/eyes.gif" style="display:block; margin:3% 0 0 5%; float: left;" />
+					<span style="margin:7% 0 0 5%; float: left;">大沥筛查点</span>
+					<select class="select" style="float: left; margin:-15% 0 0 70%; font-weight:bold;">
+						<option value="volvo">筛查员1</option>
+						<option value="saab">筛查员2</option>
+						<option value="opel">筛查员3</option>
+						<option value="audi">筛查员4</option>
+					</select>
+				</div>
+
+				<div class="nav" style="height: 100%; float: right; margin:2% 20% 0 10%;">
+					<a href="#">工作看板</a>
+					<a href="#">团队协作</a>
+				</div>
+			</div>
+
+			<!-- 导航栏右侧 -->
+			<div class="right">
+				<img src="img/zoushitu.gif" style="display:block; margin:15px 0 0 49%; float: left;" />
+				<img src="img/百分比图.gif" style="display:block; margin:-25px 0 0 68%; float: left;" />
+				<img src="img/liaotian.gif" style="display:block; margin:-32px 0 0 78%; float: left;" />
+				<img src="img/xinxi.gif" style="display:block; margin:-32px 0 0 88%; float: left; " />
+			</div>
+		</header>
+
+		<!-- 内容页 -->
+		<div class="container">
+			<div class="content1">
+				<div class="list1" style="border-bottom: 2px solid black; width: 100%; height: 5.5%; margin:0 auto; margin-top:3%;">
+					<div class="list_left" style="width: 45%; height: 100%; float: left; 
+				font-weight:bold; margin-left:5%;">患者列表</div>
+					<div class="list_right" style="width: 49%; height: 100%; float: right; ">
+						<select style="float: right; border: 2px solid #080808; margin-right:10%;">
+							<option value="volvo"><img src="img/就诊icon.gif" width="20px" />未就诊</option>
+							<option value="saab">已就诊</option>
+							<option value="opel">筛查员3</option>
+							<option value="audi">筛查员4</option>
+						</select>
+					</div>
+				</div>
+				<div class="list2" style="border-bottom: 2px solid black; width: 100%; height: 5%; margin:0 auto; margin-top: 5%;">
+					<div style="float:left; margin-left:6%;">
+						<input id="search_1" placeholder="姓名,手机号,身份证号" name="idefiy" value="" style="display: block; border-radius: 15px; padding-left: 5%;  width:90%;" />
+					</div>
+					<div style="float:right; margin-right:5%;" id="search_bt">
+						<img src="img/delete (2).png"></img>
+					</div>
+				</div>
+				<!-- 这里属于程序加载的部分 -->
+				<div id="list3" class="list3" style=" width: 100%; height: 84%;overflow-y: hidden; ">
+					<!-- 第一个信息 -->
+
+					<!-- 点击更多 -->
+					<div id="lookmore" onclick="lookMore()" style="border: 1px solid black; width: 22%;left: 2%; position: absolute;bottom: -21.5%; height: 2%; text-align:center; padding-top:5px; z-index: 10;background-color: white;">
+						加载更多...
+					</div>
+
+				</div>
+			</div>
+
+			<div class="content2">
+				<div class="list1" style="border-bottom: 2px solid black; width: 90%; height: 5%; margin:0 auto; margin-top:3%;">
+					<div class="list_left" style="width: 45%; height: 100%; float: left; 
+				font-weight:bold; margin-left:5%;">就诊列表</div>
+					<div class="list_right" style="width: 49%; height: 100%; float: right; ">
+						<select style="float: right; border: 2px solid #080808; margin-right:10%;">
+							<option value="volvo"><img src="img/就诊icon.gif" width="20px" />今天</option>
+							<option value="saab">已就诊</option>
+							<option value="opel">筛查员3</option>
+							<option value="audi">筛查员4</option>
+						</select>
+					</div>
+				</div>
+				<div class="list2" style="border-bottom: 2px solid black; width: 90%; height: 5%; margin:0 auto;">
+					<input placeholder="姓名,手机号,身份证号" name="idefiy" value="" style="display: block; border: 2px solid #080808; border-radius: 15px; padding-left: 5%; margin:0 auto; margin-top: 5%; width: 80%;" />
+				</div>
+				<!-- 这里属于程序加载的部分 -->
+				<div class="list3" style="width: 100%; height: 89%; ">
+					<!-- 第一个信息 -->
+					<div style="border: 2px solid black; width: 90%; margin:5% 0 0 5%; height: 14%;">
+						<!-- 左侧包含姓名和电话 -->
+						<div class="artilce_left" style="border-right: 2px solid black; width: 40%; height: 100%; float: left;vertical-align:middle;">
+							<div style="height: 80%; padding:15% 0 0 5%;" class="top">
+								<div style="padding-left:5%">张三&nbsp;男&nbsp;60岁</div>
+								<div style="padding-left:5%;margin-top:15% ;">13800138000</div>
+							</div>
+						</div>
+						<!-- 详情 -->
+						<div class="artilce_center" style="border-right: 2px solid black;width: 30%; height: 100%; float: left; margin-left:0px;">
+							<img src="img/详情.gif" style="padding: 30px 0 0 40%;" />
+						</div>
+						<!-- 照相机 -->
+						<div class="artilce_right" style="width: 20%; height: 100%; float: right; ">
+							<img src="img/照相机.gif" style="padding: 30px 0 0 10%;" />
+						</div>
+					</div>
+					<!-- 第二个信息 -->
+					<div style="border: 2px solid black; width: 90%; margin:5% 0 0 5%; height: 14%;">
+						<!-- 左侧包含姓名和电话 -->
+						<div class="artilce_left" style="border-right: 2px solid black; width: 40%; height: 100%; float: left;vertical-align:middle;">
+							<div style="height: 80%; padding:15% 0 0 5%;" class="top">
+								<div style="padding-left:5%">张三&nbsp;男&nbsp;60岁</div>
+								<div style="padding-left:5%;margin-top:15% ;">13800138000</div>
+							</div>
+						</div>
+						<!-- 详情 -->
+						<div class="artilce_center" style="border-right: 2px solid black;width: 30%; height: 100%; float: left; margin-left:0px;">
+							<img src="img/详情.gif" style="padding: 30px 0 0 40%;" />
+						</div>
+						<!-- 照相机 -->
+						<div class="artilce_right" style="width: 20%; height: 100%; float: right; ">
+							<img src="img/照相机.gif" style="padding: 30px 0 0 10%;" />
+						</div>
+					</div>
+					<!-- 第三个信息 -->
+					<div style="border: 2px solid black; width: 90%; margin:5% 0 0 5%; height: 14%;">
+						<!-- 左侧包含姓名和电话 -->
+						<div class="artilce_left" style="border-right: 2px solid black; width: 40%; height: 100%; float: left;vertical-align:middle;">
+							<div style="height: 80%; padding:15% 0 0 5%;" class="top">
+								<div style="padding-left:5%">张三&nbsp;男&nbsp;60岁</div>
+								<div style="padding-left:5%;margin-top:15% ;">13800138000</div>
+							</div>
+						</div>
+						<!-- 详情 -->
+						<div class="artilce_center" style="border-right: 2px solid black;width: 30%; height: 100%; float: left; margin-left:0px;">
+							<img src="img/详情.gif" style="padding: 30px 0 0 40%;" />
+						</div>
+						<!-- 照相机 -->
+						<div class="artilce_right" style="width: 20%; height: 100%; float: right; ">
+							<img src="img/照相机.gif" style="padding: 30px 0 0 10%;" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="content3">
+				<div class="list1" style="border-bottom: 2px solid black; width: 90%; height: 5%; margin:0 auto; margin-top:3%;">
+					<div class="list_left" style="width: 45%; height: 100%; float: left; 
+				font-weight:bold; margin-left:5%;">分级列表</div>
+					<div class="list_right" style="width: 49%; height: 100%; float: right; ">
+						<select style="float: right; border: 2px solid #080808; margin-right:10%;">
+							<option value="volvo"><img src="img/就诊icon.gif" width="20px" />今天</option>
+							<option value="saab">已就诊</option>
+							<option value="opel">筛查员3</option>
+							<option value="audi">筛查员4</option>
+						</select>
+					</div>
+				</div>
+				<div class="list2" style="border-bottom: 2px solid black; width: 90%; height: 5%; margin:0 auto;">
+					<input placeholder="姓名,手机号,身份证号" name="idefiy" value="" style="display: block; border: 2px solid #080808; border-radius: 15px; padding-left: 5%; margin:0 auto; margin-top: 5%; width: 80%;" />
+				</div>
+				<!-- 这里属于程序加载的部分 -->
+				<div class="list3" style="width: 100%; height: 89%; ">
+					<!-- 第一个信息 -->
+					<div style="border: 2px solid black; width: 90%; margin:5% 0 0 5%; height: 14%;">
+						<!-- 左侧包含姓名和电话身份证 -->
+						<div class="artilce_left" style="border-right: 2px solid black; width: 65%; height: 100%; float: left;vertical-align:middle;">
+							<!-- 姓名和电话 -->
+							<div style="height: 80%" class="top">
+								<!-- 姓名和电话 -->
+								<div class="right_" style="padding:10% 0 0 5%; ">
+									<div style="padding-left:5%">张三&nbsp;男&nbsp;60岁</div>
+									<div class="bottom" style="height: 10%; padding:10% 0 0 5%;"><img src="img/pic-小.gif" />.4</div>
+								</div>
+
+							</div>
+						</div>
+						<!-- 右侧包括选择按钮 -->
+						<div class="artilce_right" style="width: 20%; height: 100%; float: right; ">
+							<button style="display: block; margin-top:35%; margin-left:-35%; width: 100%; border:2px solid #080808 ;border-radius: 5px;">上传中(4/2)</button>
+						</div>
+					</div>
+					<!-- 第二个信息 -->
+					<div style="border: 2px solid black; width: 90%; margin:5% 0 0 5%; height: 14%;">
+						<!-- 左侧包含姓名和电话身份证 -->
+						<div class="artilce_left" style="border-right: 2px solid black; width: 65%; height: 100%; float: left;vertical-align:middle;">
+							<!-- 姓名和电话 -->
+							<div style="height: 80%" class="top">
+								<!-- 姓名和电话 -->
+								<div class="right_" style="padding:10% 0 0 5%; ">
+									<div style="padding-left:5%">张三&nbsp;男&nbsp;60岁</div>
+									<div class="bottom" style="height: 10%; padding:10% 0 0 5%;"><img src="img/pic-小.gif" />.4</div>
+								</div>
+							</div>
+						</div>
+						<!-- 右侧包括选择按钮 -->
+						<div class="artilce_right" style="width: 20%; height: 100%; float: right; ">
+							<button style="display: block; margin-top:35%; margin-left:-35%; width: 100%; border:2px solid #080808 ;border-radius: 5px;">上传中(4/2)</button>
+						</div>
+					</div>
+					<!-- 第三个信息 -->
+					<div style="border: 2px solid black; width: 90%; margin:5% 0 0 5%; height: 14%;">
+						<!-- 左侧包含姓名和电话身份证 -->
+						<div class="artilce_left" style="border-right: 2px solid black; width: 65%; height: 100%; float: left;vertical-align:middle;">
+							<!-- 姓名和电话 -->
+							<div style="height: 80%" class="top">
+								<!-- 姓名和电话 -->
+								<div class="right_" style="padding:10% 0 0 5%; ">
+									<div style="padding-left:5%">张三&nbsp;男&nbsp;60岁</div>
+									<div class="bottom" style="height: 10%; padding:10% 0 0 5%;"><img src="img/pic-小.gif" />.4</div>
+								</div>
+							</div>
+						</div>
+						<!-- 右侧包括选择按钮 -->
+						<div class="artilce_right" style="width: 20%; height: 100%; float: right; ">
+							<button style="display: block; margin-top:35%; margin-left:-35%; width: 100%; border:2px solid #080808 ;border-radius: 5px;">上传中(4/2)</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content4">
+				<div class="list1" style="border-bottom: 2px solid black; width: 90%; height: 5%; margin:0 auto; margin-top:3%;">
+					<div class="list_left" style="width: 45%; height: 100%; float: left; 
+				font-weight:bold; margin-left:5%;">报告列表</div>
+					<div class="list_right" style="width: 49%; height: 100%; float: right; ">
+						<select style="float: right; border: 2px solid #080808; margin-right:10%;">
+							<option value="volvo"><img src="img/就诊icon.gif" width="20px" />今天</option>
+							<option value="saab">已就诊</option>
+							<option value="opel">筛查员3</option>
+							<option value="audi">筛查员4</option>
+						</select>
+					</div>
+				</div>
+				<div class="list2" style="border-bottom: 2px solid black; width: 90%; height: 5%; margin:0 auto;">
+					<input placeholder="姓名,手机号,身份证号" name="idefiy" value="" style="display: block; border: 2px solid #080808; border-radius: 15px; padding-left: 5%; margin:0 auto; margin-top: 5%; width: 80%;" />
+				</div>
+				<!-- 这里属于程序加载的部分 -->
+				<div class="list3" style="width: 100%; height: 89%; ">
+					<!-- 第一个信息 -->
+					<div style="border: 2px solid black; width: 90%; margin:5% 0 0 5%; height: 14%;">
+						<!-- 左侧包含姓名和电话身份证 -->
+						<div class="artilce_left" style="border-right: 2px solid black; width: 65%; height: 100%; float: left;vertical-align:middle;">
+							<!-- 姓名和电话 -->
+							<div style="height: 80%" class="top">
+								<!-- 姓名和电话 -->
+								<!--<div class="right_" style="padding:20px 0 0 40px; ">
+								<div style="padding-left:20px">张三&nbsp;男&nbsp;60岁</div>						
+								<div class="bottom" style="height: 10%; padding:10px 0 0 20px;"><img src="img/pic-小.gif"/>.4</div>
+							</div>-->
+
+								<div class="right_" style="padding:10% 0 0 5%; ">
+									<div style="padding-left:5%">张三&nbsp;男&nbsp;60岁</div>
+									<div class="bottom" style="height: 10%; padding:10% 0 0 5%;"><img src="img/pic-小.gif" />.4</div>
+								</div>
+							</div>
+						</div>
+						<!-- 右侧包括选择按钮 -->
+						<div class="artilce_right" style="width: 20%; height: 100%; float: right; margin-top:30px;">
+							<img src="img/下载.png" />
+						</div>
+					</div>
+					<!-- 第二个信息 -->
+					<div style="border: 2px solid black; width: 90%; margin:5% 0 0 5%; height: 14%;">
+						<!-- 左侧包含姓名和电话身份证 -->
+						<div class="artilce_left" style="border-right: 2px solid black; width: 65%; height: 100%; float: left;vertical-align:middle;">
+							<!-- 姓名和电话 -->
+							<div style="height: 80%" class="top">
+								<!-- 姓名和电话 -->
+								<div class="right_" style="padding:10% 0 0 5%; ">
+									<div style="padding-left:5%">张三&nbsp;男&nbsp;60岁</div>
+									<div class="bottom" style="height: 10%; padding:10% 0 0 5%;"><img src="img/pic-小.gif" />.4</div>
+								</div>
+							</div>
+						</div>
+						<!-- 右侧包括选择按钮 -->
+						<div class="artilce_right" style="width: 20%; height: 100%; float: right; margin-top:30px;">
+							<img src="img/下载.png" />
+						</div>
+					</div>
+					<!-- 第三个信息 -->
+					<div style="border: 2px solid black; width: 90%; margin:5% 0 0 5%; height: 14%;">
+						<!-- 左侧包含姓名和电话身份证 -->
+						<div class="artilce_left" style="border-right: 2px solid black; width: 65%; height: 100%; float: left;vertical-align:middle;">
+							<!-- 姓名和电话 -->
+							<div style="height: 80%" class="top">
+								<!-- 姓名和电话 -->
+								<div class="right_" style="padding:10% 0 0 5%; ">
+									<div style="padding-left:5%">张三&nbsp;男&nbsp;60岁</div>
+									<div class="bottom" style="height: 10%; padding:10% 0 0 5%;"><img src="img/pic-小.gif" />.4</div>
+								</div>
+							</div>
+						</div>
+						<!-- 右侧包括选择按钮 -->
+						<div class="artilce_right" style="width: 20%; height: 100%; float: right; margin-top:30px;">
+							<img src="img/下载.png" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+
+		</footer>
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script>
+			function getName() {
+				var familyNames = new Array(
+					"赵", "钱", "孙", "李", "周", "吴", "郑", "王", "冯", "陈",
+					"褚", "卫", "蒋", "沈", "韩", "杨", "朱", "秦", "尤", "许",
+					"何", "吕", "施", "张", "孔", "曹", "严", "华", "金", "魏",
+					"陶", "姜", "戚", "谢", "邹", "喻", "柏", "水", "窦", "章",
+					"云", "苏", "潘", "葛", "奚", "范", "彭", "郎", "鲁", "韦",
+					"昌", "马", "苗", "凤", "花", "方", "俞", "任", "袁", "柳",
+					"酆", "鲍", "史", "唐", "费", "廉", "岑", "薛", "雷", "贺",
+					"倪", "汤", "滕", "殷", "罗", "毕", "郝", "邬", "安", "常",
+					"乐", "于", "时", "傅", "皮", "卞", "齐", "康", "伍", "余",
+					"元", "卜", "顾", "孟", "平", "黄", "和", "穆", "萧", "尹"
+				);
+				var givenNames = new Array(
+					"子璇", "淼", "国栋", "夫子", "瑞堂", "甜", "敏", "尚", "国贤", "贺祥", "晨涛",
+					"昊轩", "易轩", "益辰", "益帆", "益冉", "瑾春", "瑾昆", "春齐", "杨", "文昊",
+					"东东", "雄霖", "浩晨", "熙涵", "溶溶", "冰枫", "欣欣", "宜豪", "欣慧", "建政",
+					"美欣", "淑慧", "文轩", "文杰", "欣源", "忠林", "榕润", "欣汝", "慧嘉", "新建",
+					"建林", "亦菲", "林", "冰洁", "佳欣", "涵涵", "禹辰", "淳美", "泽惠", "伟洋",
+					"涵越", "润丽", "翔", "淑华", "晶莹", "凌晶", "苒溪", "雨涵", "嘉怡", "佳毅",
+					"子辰", "佳琪", "紫轩", "瑞辰", "昕蕊", "萌", "明远", "欣宜", "泽远", "欣怡",
+					"佳怡", "佳惠", "晨茜", "晨璐", "运昊", "汝鑫", "淑君", "晶滢", "润莎", "榕汕",
+					"佳钰", "佳玉", "晓庆", "一鸣", "语晨", "添池", "添昊", "雨泽", "雅晗", "雅涵",
+					"清妍", "诗悦", "嘉乐", "晨涵", "天赫", "玥傲", "佳昊", "天昊", "萌萌", "若萌"
+				);
+
+				var i = parseInt(10 * Math.random()) * 10 + parseInt(10 * Math.random());
+				var familyName = familyNames[i];
+
+				var j = parseInt(10 * Math.random()) * 10 + parseInt(10 * Math.random());
+				var givenName = givenNames[i];
+
+				var name = familyName + givenName;
+				return(name);
+			}
+			//生成随机手机号
+			function getMoble() {
+
+				var prefixArray = new Array("130", "131", "132", "133", "135", "137", "138", "170", "187", "189");
+				var i = parseInt(10 * Math.random());
+				var prefix = prefixArray[i];
+
+				for(var j = 0; j < 8; j++) {
+					prefix = prefix + Math.floor(Math.random() * 10);
+				}
+				return(prefix);
+			}
+			//生成随机年龄
+			function getAge() {
+				var i = parseInt(60 * Math.random());
+				return(i);
+			}
+			//生成随机性别
+			function getSex() {
+				var i = parseInt(2 * Math.random());
+				if(i == 1) {
+					return("男")
+				} else {
+					return('女');
+				}
+			}
+			//生成随机银行卡号
+			function getBank_account() {
+
+				var bank_no = parseInt(17 * Math.random());;
+				var prefix = "";
+				switch(bank_no) {
+					case 1:
+						prefix = "622202";
+						break;
+					case 2:
+						prefix = "622848";
+						break;
+					case 3:
+						prefix = "622700";
+						break;
+					case 4:
+						prefix = "622262";
+						break;
+					case 5:
+						prefix = "621661";
+						break;
+					case 6:
+						prefix = "622666";
+						break;
+					case 7:
+						prefix = "622622";
+						break;
+					case 8:
+						prefix = "622556";
+						break;
+					case 9:
+						prefix = "622588";
+						break;
+					case 10:
+						prefix = "622155";
+						break;
+					case 11:
+						prefix = "622689";
+						break;
+					case 12:
+						prefix = "622630";
+						break;
+					case 13:
+						prefix = "622908";
+						break;
+					case 14:
+						prefix = "621717";
+						break;
+					case 15:
+						prefix = "622323";
+						break;
+					case 16:
+						prefix = "622309";
+						break;
+					default:
+				}
+
+				for(var j = 0; j < 13; j++) {
+					prefix = prefix + Math.floor(Math.random() * 10);
+				}
+
+				return(prefix);
+			}
+			//定义病人对象
+			function patient() {
+				this.sex = getSex(); //性别
+				this.Age = getAge(); //年龄
+				this.Name = getName(); //名字
+				this.Moble = getMoble(); //手机号码
+				this.Bank_account = getBank_account(); //银行卡号
+			}
+
+			//创建十个病人
+			var patients = new Array();
+			for(i = 0; i <= 9; i++) {
+				patients[i] = new patient();
+				$("#list3").append("<div data-msg-type=" + i + " style='border: 2px solid black; width: 90%; margin:5% 0 0 5%; height: 13%;'><div class='artilce_left' style='border-right: 2px solid black; width: 65%; height: 100%; float: left;vertical-align:middle;'><div style='height: 70%' class='top'><div class='left_' style='padding:5% 0 0 10%; float: left;'><img src='img/pic.gif' /></div><div class='right_' style='padding:5% 0 0 10%; '><div style='padding-left:6%'>" + patients[i].Name + "&nbsp;" + patients[i].sex + "&nbsp;" + patients[i].Age + "岁</div><div style='padding-left:6%; margin-top: 5%;'>" + patients[i].Moble + "</div></div></div><div class='bottom' style='height: 10%; padding:0 0 0 5%;'>" + patients[i].Bank_account + "</div></div><div class='artilce_right' style='width: 20%; height: 100%; float: left;'><input class='check' data-msg-type=" + i + " type='checkbox'  style='width: 30px; height: 55px; margin:20% 0 0 60%;' /></div></div>");
+			}
+			//加载更多
+			//		function lookMore() {
+			//			var lookMore=document.getElementById("lookmore");
+			//			list=lookMore.parentNode;
+			//			lookMore.style.display="none";
+			//			min = min === "hidden" ? "auto" : "hidden";
+			//			list.style.overflowY=min;			
+			//		}
+
+			$("#lookmore").click(function() {
+				$("#lookmore").css('display', 'none');
+				var min = $(".list3").css("overflow-y");
+				min = min == "hidden" ? "auto" : "hidden";
+				$(".list3").css("overflow-y", min);
+			})
+
+			$('#search_1').bind('keyup', function(event) {
+				if(event.keyCode == "13") {
+					$("#list3").children('div[id!=lookmore]').css('display', 'none');
+					//回车执行查询
+					var bool = new Array();
+					for(i = 0; i <= 9; i++) {
+						var text = $("#search_1").val();
+						bool[i] = patients[i].Name.indexOf(text);
+						var j = i.toString();
+						if(bool[i] == 0) {
+							console.log(bool[i]);
+
+							$("#list3").children('div[data-msg-type=' + j + ']').css('display', 'block');
+							continue;
+						}
+						bool[i] = patients[i].Moble.indexOf(text);
+						if(bool[i] == 0) {
+							console.log(bool[i]);
+							$("#list3").children('div[data-msg-type=' + j + ']').css('display', 'block');
+							continue;
+						}
+						bool[i] = patients[i].Bank_account.indexOf(text);
+						if(bool[i] == 0) {
+							console.log(bool[i]);
+							$("#list3").children('div[data-msg-type=' + j + ']').css('display', 'block');
+						}
+
+					}
+				}
+			});
+			var storage = window.localStorage;
+			//单机选定
+			var num = new Array();
+			$(".check").click(function() {
+
+				var num1 = $(this).attr('data-msg-type');
+				num.push(num1);
+
+			})
+
+			//删除 
+			$("#search_bt").click(function() {
+				console.log(num);
+				for(i = 0; i <= num.length; i++) {
+					console.log(num.length);
+					var m = num[i];
+					$("#list3").children('div[data-msg-type=' + m + ']').remove();
+				}
+			})
+		</script>
+	</body>
+
+</html>
